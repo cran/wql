@@ -1,0 +1,26 @@
+# Needed if R < 2.8.0; later versions pass package metadata to citation().
+if(!exists("meta") || is.null(meta)) meta <- packageDescription("wq")
+
+year <- substring(meta$Date, 1, 4)
+vers <- paste("R package version", meta$Version)
+
+bibentry(key = paste0("jassby", year, "wq"),
+  bibtype = "Manual",
+  title = "wq: Exploring water quality monitoring data",
+  author = c(
+	  person(c("Alan", "D."), "Jassby", role = c("aut", "cre"), 
+	         email = "adjassby@ucdavis.edu"),
+	  person(c("James", "E."), "Cloern", role = c("aut"))
+  ),
+  year = year,
+  note = vers,
+  url = "https://CRAN.R-project.org/package=wq",
+  textVersion = paste0(
+    "Alan D. Jassby and James E. Cloern (", 
+    year, 
+    "). wq: Some tools for exploring water quality monitoring data. ", 
+    vers, 
+    ". https://cran.r-project.org/package=wq"
+  ),
+  header = "To cite wq in publications use:"
+)
