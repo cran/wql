@@ -1,13 +1,13 @@
 Package: wql
 Type: Package
 Title: Exploring Water Quality Monitoring Data
-Version: 0.4.9
+Version: 1.0.0
 Authors@R: c(
   person("Alan", "Jassby", role = c("aut")),
   person("James", "Cloern", role = c("ctb")),
-  person("Joseph", "Stachelek", role = c("ctb", "cre"), email = "stachel2@msu.edu")
+  person("Jemma", "Stachelek", role = c("ctb", "cre"), email = "jemma.stachelek@gmail.com")
   )
-Maintainer: Joseph Stachelek <stachel2@msu.edu>
+Maintainer: Jemma Stachelek <jemma.stachelek@gmail.com>
 URL: https://github.com/jsta/wql
 BugReports: https://github.com/jsta/wql/issues
 Description: Functions to assist in the processing and
@@ -27,11 +27,11 @@ LazyData: yes
 License: GPL-2
 VignetteBuilder: knitr
 NeedsCompilation: no
-RoxygenNote: 6.0.1
+RoxygenNote: 7.2.0
 Suggests: knitr, rmarkdown
-Packaged: 2017-07-04 19:21:11 UTC; jose
+Packaged: 2022-08-06 20:46:30 UTC; jemma
 Author: Alan Jassby [aut],
   James Cloern [ctb],
-  Joseph Stachelek [ctb, cre]
+  Jemma Stachelek [ctb, cre]
 Repository: CRAN
-Date/Publication: 2017-07-04 20:23:24 UTC
+Date/Publication: 2022-08-10 16:20:02 UTC
