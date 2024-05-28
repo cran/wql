@@ -1,6 +1,6 @@
-6dd3bd9b81a5ddf8a41b4779ee27fd4d *DESCRIPTION
+ddebdd749e885d8be12eb5924d70421f *DESCRIPTION
 658f677e331fdeb09ddee563694b6744 *NAMESPACE
-2a6ffa8256306f70af0ab2a71a8985e3 *NEWS.md
+0a3850d501bfb82a46d213ad57d371ab *NEWS.md
 855f26cdc1f2897b5c7a608fb6639bf9 *R/DateTime-class.R
 2cb7e9f16923b46c85bc26ef8d411187 *R/R2pss.R
 e69b342a056701678fb18d65275fb26c *R/WqData-class.R
@@ -14,7 +14,7 @@ bb26e2bac0de1c61d99982b0f20502c1 *R/eof.R
 2749c0a01fc5dfcbcc836d7773d2a301 *R/interpTs.R
 e5f149ba1410d1728b927a632511c589 *R/layerMean.R
 80c1282fb646cf55853bfb6bf396c65e *R/leapYear.R
-61a70848fcecf196d45b7a44d05278a1 *R/mannKen.R
+75fe36b9b187946bf5e1edbab0216520 *R/mannKen.R
 9ce20f8398b81406c580a27ae3e0253f *R/meanSub.R
 6abfa1322ff577225e64928eb0a71ccf *R/monthCor.R
 6d166592660660e8813fe32ba08a7bd5 *R/monthNum.R
@@ -35,16 +35,16 @@ bde2851281e30db26390a2b1421e16eb *R/ts2df.R
 1c812a1e4e850caba790d10462fa0fac *R/tsMake.R
 fb333cd891bb98a06d4736d2cc8af833 *R/tsSub.R
 33a8ea3ddaba8d913121493827184e49 *R/wqData.R
-a7c4ffde7b906a2a38b09fe5ebdac57d *R/wql-package.R
+983a62eebc18254a2391040da45dae50 *R/wql-package.R
 f8ef2a5c2e23ed4bf11a0149beaeb1a1 *R/years.R
 f07c66de7526b5a9961c53a2aa6931cb *README.md
-d07e3e4d83a1cf9facc02494b77b77b0 *build/vignette.rds
-6b4f4e3094b94778c26cb38f486a3bdf *build/wql.pdf
+45e06f3ab72ae3eb38513796f658ff09 *build/partial.rdb
+363aaadd05fa7a8c31e805a9c088a8ac *build/vignette.rds
 a4895da1e7f7fff365b661bf0e39d716 *data/sfbay.rda
 132c24119842f11daf604b66c02a785b *inst/CITATION
-7d2a730dab59bf8accfef3fd78b15fa4 *inst/doc/wql-package.R
+fe485a5eb72e1700c765bb19cffb5225 *inst/doc/wql-package.R
 8d0524ee6f88314f3d3392a5c6405b76 *inst/doc/wql-package.Rmd
-88de4dbf57b48402a9d6e41b5f4f3e77 *inst/doc/wql-package.html
+d4f49d2f5f4d40f0b0dbb927bb07f87f *inst/doc/wql-package.html
 a633f78b3f0160a4a98ede90428e1cce *man/DateTime-class.Rd
 05a6745b5d2b8b62edf13e22c08814e1 *man/R2pss.Rd
 b38b0fd7833536302235239ee376d7d2 *man/WqData-class.Rd
@@ -58,7 +58,7 @@ d9be4c271d1ba9946ab13e28dd1af5be *man/eofNum.Rd
 46d0b3e0a7b0d7c173bbdf3dc5b5f517 *man/interpTs.Rd
 7be6d504c73bcaf452900068063537e3 *man/layerMean.Rd
 737f7588d8f3c8c0930a946c14c9d964 *man/leapYear.Rd
-4d5d13bc5d61f79cc6e79265215042e4 *man/mannKen.Rd
+a1ba75facd31f4c8a39cb4d37ee850ba *man/mannKen.Rd
 f2761684fbe561f8813dca30252f628f *man/meanSub.Rd
 24515cceff7ab0f8d811b0b43969f7ba *man/monthCor.Rd
 b570a524b095a695bce68f01f9b9c813 *man/monthNum.Rd
@@ -83,7 +83,7 @@ f25ab0c11f8b50573d74951d09b4bdf5 *man/ts2df.Rd
 787c100574c5dd2a2e3d4c4230aebad8 *man/tsMake.Rd
 ecc6395c1ad17adbfe67ba6bf4e89935 *man/tsSub.Rd
 8909456254b8e245d11732f034cefe8d *man/wqData.Rd
-0a084ee8af6d7845171a2b4265038715 *man/wql-package.Rd
+ff8816726e0772e39f12355d0704f456 *man/wql-package.Rd
 71ad0a2c41d210082d096e1a4934d08e *man/years.Rd
 01291c1586f2452f3d3f98ca4c73081a *man/zoo-class.Rd
 c59e9c0266f208f2138768d1654d3f7f *vignettes/wq.bib

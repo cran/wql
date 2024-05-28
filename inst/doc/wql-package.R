@@ -1,7 +1,7 @@
 ## ----setup, echo=FALSE--------------------------------------------------------
 knitr::opts_chunk$set(fig.align="center", warning=FALSE)
 
-## ---- echo=FALSE, fig.width=6, fig.height=3.7---------------------------------
+## ----echo=FALSE, fig.width=6, fig.height=3.7----------------------------------
 knitr::include_graphics("wqflow.png", auto_pdf = TRUE)
 
 ## -----------------------------------------------------------------------------
@@ -33,7 +33,7 @@ head(sfb)
 ## -----------------------------------------------------------------------------
 summary(sfb)
 
-## ---- fig.width=5, fig.height=3.1---------------------------------------------
+## ----fig.width=5, fig.height=3.1----------------------------------------------
 plot(sfb, vars = c('dox', 'temp'), num.col = 2)
 
 ## -----------------------------------------------------------------------------
@@ -41,7 +41,7 @@ y <- tsMake(sfb, focus = "chl", layer = c(0, 5))
 y[1:4, ]
 tsp(y)
 
-## ---- width=5, height=8-------------------------------------------------------
+## ----width=5, height=8--------------------------------------------------------
 plotTs(y[, 1:4], dot.size = 1.3, ylab = "Chlorophyll in San Francisco Bay",
       strip.labels = paste("Station", 21:24), ncol = 1, scales = "free_y")
 
@@ -70,7 +70,7 @@ lines(chl27, col = "blue", lwd = 1.5)
 ## -----------------------------------------------------------------------------
 mannKen(Nile)
 
-## ---- fig.height=3.7, fig.width=6---------------------------------------------
+## ----fig.height=3.7, fig.width=6----------------------------------------------
 plot(Nile, ylab = "Flow", xlab = "")
 abline(v=1898, col='blue')
 pett(Nile)
@@ -92,7 +92,7 @@ seaKen(chl27)
 ## -----------------------------------------------------------------------------
 seaRoll(chl27, w = 10)
 
-## ---- fig.height=8, fig.width=7-----------------------------------------------
+## ----fig.height=8, fig.width=7------------------------------------------------
 x <- sfbayChla
 seasonTrend(x, plot = TRUE, ncol = 2, scales = 'free_y')
 
@@ -104,7 +104,7 @@ trendHomog(x)
 chl <- sfbayChla[, 1:12]  # first 12 stns have good data coverage
 seaKen(mts2ts(chl, 2:4))  # regional trend in spring bloom
 
-## ---- fig.height=3.7, fig.width=6---------------------------------------------
+## ----fig.height=3.7, fig.width=6----------------------------------------------
 chla1 <- aggregate(sfbayChla, 1, mean, na.rm = TRUE)
 chla1 <- chla1[, 1:12]
 eofNum(chla1)
@@ -113,7 +113,7 @@ eofNum(chla1)
 e1 <- eof(chla1, n = 1)
 e1
 
-## ---- fig.height=3.1, fig.width=5---------------------------------------------
+## ----fig.height=3.1, fig.width=5----------------------------------------------
 eofPlot(e1, type = "amp")
 
 ## -----------------------------------------------------------------------------
@@ -121,22 +121,22 @@ chl27b <- interpTs(sfbayChla[, "s27"], gap = 3)
 chl27b <- ts2df(chl27b, mon1 = 10, addYr = TRUE, omit = TRUE)
 head(round(chl27b, 1))
 
-## ---- fig.height=3.1, fig.width=5---------------------------------------------
+## ----fig.height=3.1, fig.width=5----------------------------------------------
 e2 <- eof(chl27b, n = 2, scale. = TRUE)
 eofPlot(e2, type = "coef")
 
-## ---- fig.height=6, fig.width=6-----------------------------------------------
+## ----fig.height=6, fig.width=6------------------------------------------------
 chl27 <- sfbayChla[, "s27"]
 d1 <- decompTs(chl27)
 plot(d1, nc = 1, main = "Station 27 Chl-a decomposition")
 
-## ---- fig.height=4.3, fig.width=7---------------------------------------------
+## ----fig.height=4.3, fig.width=7----------------------------------------------
 plotSeason(chl27, num.era = 3, same.plot = FALSE, ylab = 'Stn 27 Chl-a')
 
-## ---- fig.height=4.3, fig.width=7---------------------------------------------
+## ----fig.height=4.3, fig.width=7----------------------------------------------
 plotSeason(chl27, num.era = 3, same.plot = TRUE, ylab = 'Stn 27 Chl-a')
 
-## ---- fig.height=4.3, fig.width=7---------------------------------------------
+## ----fig.height=4.3, fig.width=7----------------------------------------------
 plotSeason(chl27, "by.month", ylab = 'Stn 27 Chl-a')
 
 ## -----------------------------------------------------------------------------
@@ -156,12 +156,12 @@ head(phenoPhase(zchl27))
 head(phenoPhase(zchl27, c(1, 6), out = 'doy'))
 head(phenoPhase(zchl27, c(1, 6), out = 'julian'))
 
-## ---- fig.height=3.7, fig.width=6---------------------------------------------
+## ----fig.height=3.7, fig.width=6----------------------------------------------
 chl <- aggregate(sfbayChla[, 1:6], 1, meanSub, 2:4, na.rm = TRUE)
 plotTsAnom(chl, ylab = 'Chlorophyll-a',
            strip.labels = paste('Station', substring(colnames(chl), 2, 3)))
 
-## ---- fig.height=4.3, fig.width=7---------------------------------------------
+## ----fig.height=4.3, fig.width=7----------------------------------------------
 chl27 <- sfbayChla[, "s27"]
 plotTsTile(chl27)
 
