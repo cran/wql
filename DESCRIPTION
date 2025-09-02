@@ -2,7 +2,7 @@ Package: wql
 Type: Package
 Title: Exploring Water Quality Monitoring Data
 Encoding: UTF-8
-Version: 1.0.2
+Version: 1.0.3
 Authors@R: c(
   person("Alan", "Jassby", role = c("aut")),
   person("James", "Cloern", role = c("ctb")),
@@ -30,9 +30,9 @@ VignetteBuilder: knitr
 NeedsCompilation: no
 RoxygenNote: 7.3.2
 Suggests: knitr, rmarkdown
-Packaged: 2025-01-22 16:27:19 UTC; jsta
+Packaged: 2025-09-02 12:32:30 UTC; jsta
 Author: Alan Jassby [aut],
   James Cloern [ctb],
   Jemma Stachelek [ctb, cre]
 Repository: CRAN
-Date/Publication: 2025-01-23 10:10:02 UTC
+Date/Publication: 2025-09-02 13:10:02 UTC

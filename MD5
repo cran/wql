@@ -1,6 +1,6 @@
-0620f7c2014a5b3f2aae65ff9e5d5337 *DESCRIPTION
+94479fbc9c4e9b58585704b4940270bd *DESCRIPTION
 658f677e331fdeb09ddee563694b6744 *NAMESPACE
-cb73909f1ca636be83024921be19a4f7 *NEWS.md
+c0777245500f5d44e23e58ed68b17bd2 *NEWS.md
 855f26cdc1f2897b5c7a608fb6639bf9 *R/DateTime-class.R
 2cb7e9f16923b46c85bc26ef8d411187 *R/R2pss.R
 e69b342a056701678fb18d65275fb26c *R/WqData-class.R
@@ -9,7 +9,7 @@ e69b342a056701678fb18d65275fb26c *R/WqData-class.R
 fc8ab101e893f492b18028651c83ca38 *R/decyear2date.R
 ef88fbebc0b8e86eedfed9233b137f37 *R/ec2pss.R
 bb26e2bac0de1c61d99982b0f20502c1 *R/eof.R
-4af9361c6ad1df1fce0afd8139716e9f *R/eofNum.R
+b24c486411ce3712cb386e75e7793ef2 *R/eofNum.R
 0b73308ef0d11f65c2cd7cad850a8233 *R/eofPlot.R
 2749c0a01fc5dfcbcc836d7773d2a301 *R/interpTs.R
 e5f149ba1410d1728b927a632511c589 *R/layerMean.R
@@ -44,7 +44,7 @@ a4895da1e7f7fff365b661bf0e39d716 *data/sfbay.rda
 6cc8e38b06470a2c84e944842cc49904 *inst/CITATION
 fe485a5eb72e1700c765bb19cffb5225 *inst/doc/wql-package.R
 c9663f6d5251d9c27e321024372950ba *inst/doc/wql-package.Rmd
-915a4679c54932870f5b9675d9f83896 *inst/doc/wql-package.html
+4001cad2c22fa0cd11649b211dc9ac5c *inst/doc/wql-package.html
 a633f78b3f0160a4a98ede90428e1cce *man/DateTime-class.Rd
 05a6745b5d2b8b62edf13e22c08814e1 *man/R2pss.Rd
 b38b0fd7833536302235239ee376d7d2 *man/WqData-class.Rd
@@ -76,14 +76,14 @@ a8619315e1f8012d040a7cec76b9a329 *man/phenoPhase.Rd
 9005101e92b02b8297bf6a11f0a00ec8 *man/seaKen.Rd
 93baeaf2efeef66b5d0acaf42fcec271 *man/seaRoll.Rd
 573b1c828b1cce8d67895f700cbd17bf *man/seasonTrend.Rd
-a35ca0f0639a4a1a091313736a76579e *man/sfbay.Rd
+589e905b976a45a2b98324718f524d6b *man/sfbay.Rd
 b22d189402c7a180a450d538b234d1a0 *man/trendHomog.Rd
 f25ab0c11f8b50573d74951d09b4bdf5 *man/ts2df.Rd
 926faadf723ab4ad5e2d46d22746250c *man/tsMake-methods.Rd
 787c100574c5dd2a2e3d4c4230aebad8 *man/tsMake.Rd
 ecc6395c1ad17adbfe67ba6bf4e89935 *man/tsSub.Rd
 8909456254b8e245d11732f034cefe8d *man/wqData.Rd
-3b1ad87ef9dd1474bee5fe74f019f55a *man/wql-package.Rd
+ff8816726e0772e39f12355d0704f456 *man/wql-package.Rd
 71ad0a2c41d210082d096e1a4934d08e *man/years.Rd
 01291c1586f2452f3d3f98ca4c73081a *man/zoo-class.Rd
 c59e9c0266f208f2138768d1654d3f7f *vignettes/wq.bib
