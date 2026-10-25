@@ -13,6 +13,12 @@ leapYear(x)
 \code{TRUE} if \code{x} is a leap year, \code{FALSE}
 otherwise.
 }
+\examples{
+
+leapYear(seq(1500, 2000, 100))
+leapYear(c(1996.9, 1997))
+
+}
 \author{
 Alan Jassby, James Cloern
 }

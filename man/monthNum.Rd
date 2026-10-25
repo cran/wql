@@ -12,6 +12,11 @@ monthNum(y)
 \description{
 Converts dates to the corresponding numeric month.
 }
+\examples{
+
+monthNum(as.Date(c("2007-03-17", "2003-06-01")))
+
+}
 \author{
 Alan Jassby, James Cloern
 }

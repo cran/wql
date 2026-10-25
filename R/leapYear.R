@@ -5,6 +5,11 @@
 #' @author 
 #' Alan Jassby, James Cloern
 #' @export
+#' @examples
+#'
+#' leapYear(seq(1500, 2000, 100))
+#' leapYear(c(1996.9, 1997))
+#'
 leapYear <- 
 function(x) {
   if (!is.numeric(x))

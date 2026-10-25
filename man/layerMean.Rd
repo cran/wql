@@ -7,7 +7,8 @@
 layerMean(d)
 }
 \arguments{
-\item{d}{data.frame}
+\item{d}{A numeric matrix or data frame with depth in the first column and
+observations for some variable in each of the remaining columns.}
 }
 \description{
 Acts on a matrix or data frame with depth in the first
@@ -19,6 +20,13 @@ handled. Data are not extrapolated to cover missing values at the top or
 bottom of the layer. The result can differ markedly from the simple mean
 even for equal spacing of depths, because the top and bottom values are
 weighted by 0.5 in a trapezoidal mean.
+}
+\examples{
+
+z <- c(1, 2, 3, 5, 10)  # 5 depths
+x <- matrix(rnorm(30), nrow = 5)  # 6 variables at 5 depths
+layerMean(cbind(z, x))
+
 }
 \author{
 Alan Jassby, James Cloern

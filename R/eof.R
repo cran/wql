@@ -86,7 +86,7 @@ function (x, n, scale. = TRUE) {
     stop("x must have distinct row names")
 
   # get EOFs (as scaled eigenvectors)
-  pr1 <- prcomp(x, scale.=TRUE)
+  pr1 <- prcomp(x, scale.=scale.)
   eigenval1 <- pr1[["sdev"]][1:n]^2
   eigenvec1 <- pr1[["rotation"]][, 1:n]
   eof1 <- eigenvec1 %*% diag(sqrt(eigenval1), n, n)

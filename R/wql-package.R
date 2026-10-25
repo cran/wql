@@ -38,56 +38,6 @@ NULL
 
 
 
-#' Phenological amplitude
-#'
-#' Finds various measures of the amplitude of the annual cycle, or of some
-#' specified season range.
-#'
-#' \code{phenoAmp} gives three measures of the amplitude of a seasonal cycle:
-#' the range, the variance, and the median absolute deviation, along with the
-#' mean and median to allow calculation of other statistics as well.
-#'
-#' These measures can be restricted to a subset of the year by giving the
-#' desired range of season numbers. This can be useful for isolating measures
-#' of, say, the spring and autumn phytoplankton blooms in temperate waters. In
-#' the case of a monthly time series, for example, a non-missing value is
-#' required for every month or the result will be \code{NA}, so using a period
-#' shorter than one year can also help avoid any months that are typically not
-#' covered by the sampling program. Similarly, in the case of dated
-#' observations, a shorter period can help avoid times of sparse data. The
-#' method for time series allows for other than monthly frequencies, but
-#' \code{season.range} is always interpreted as months for \code{zoo} objects.
-#'
-#' Note that the amplitude is sensitive to the number of samples for small
-#' numbers. This could be a problem for \code{zoo} objects if the sample number
-#' is changing greatly from year to year, depending on the amplitude measure
-#' and the underlying data distribution. So use \code{ts} objects or make sure
-#' that the sample number stays more or less the same over time.
-#'
-#' \code{\link{tsMake}} can be used to produce \code{ts} and \code{zoo} objects
-#' suitable as arguments to this function.
-#'
-#' @name phenoAmp
-#' @aliases phenoAmp,ts-method phenoAmp,zoo-method
-#' @param x A seasonal time series, or a class \code{zoo} object.
-#' @param season.range A vector of two numbers specifying the season range to
-#' be considered.
-#' @return A matrix of class \code{ts} or \code{zoo} with individual series for
-#' the range, variance, median absolute deviation, mean, median and -- in the
-#' case of \code{zoo} objects -- number of samples.
-#' @seealso \code{\link{phenoPhase}}, \code{\link{tsMake}}
-#' @references Cloern, J.E. and Jassby, A.D. (2008) Complex seasonal patterns
-#' of primary producers at the land-sea interface. \emph{Ecology Letters}
-#' \bold{11,} 1294--1303.
-#' @keywords manip ts
-#' @examples
-#'
-#' y <- sfbayChla[, "s27"]
-#' phenoAmp(y) # entire year
-#' # i.e., Jan-Jun only, which yields results for more years
-#' phenoAmp(y, c(1, 6))
-#'
-NULL
 
 #' Methods for Function phenoPhase
 #'
@@ -100,92 +50,6 @@ NULL
 #' \code{\link{phenoPhase,ts-method}}} \item{list("signature(x =
 #' \"zoo\")")}{See \code{\link{phenoPhase,zoo-method}}} }
 #' @keywords methods
-NULL
-
-
-
-
-
-#' Phenological phase
-#'
-#' Finds various measures of the phase of the annual cycle, or of some
-#' specified month range.
-#'
-#' \code{phenoPhase} gives three measures of the phasing of a seasonal cycle:
-#' the time of the maximum (Cloern and Jassby 2008), the \emph{fulcrum} or
-#' center of gravity, and the weighted mean season (Colebrook 1979). The latter
-#' has sometimes been referred to in the literature as \dQuote{centre of
-#' gravity}, but it is not actually the same. These measures differ in their
-#' sensitivity to changes in the seasonal pattern, and therefore also in their
-#' susceptibility to sampling variability. The time of maximum is the most
-#' sensitive, the weighted mean the least.
-#'
-#' These measures can be restricted to a subset of the year by giving the
-#' desired range of seasons. This can be useful for isolating measures of, say,
-#' the spring and autumn phytoplankton blooms in temperate waters. In the case
-#' of a seasonal time series, a non-missing value is required for every season
-#' or the result will be \code{NA}, so using a period shorter than one year can
-#' also help avoid any seasons that are typically not covered by the sampling
-#' program. Similarly, in the case of dated observations, a shorter period can
-#' help avoid times of sparse data. The method for time series allows for other
-#' than monthly frequencies, but \code{season.range} is always interpreted as
-#' months for \code{zoo} objects. The method for time series requires data for
-#' all seasons in \code{season.range}. The method for \code{zoo} objects will
-#' provide a result regardless of number of sampling days, so make sure that
-#' data are sufficient for a meaningful result.
-#'
-#' The measures are annum-centric, i.e., they reflect the use of calendar year
-#' as the annum, which may not be appropriate for cases in which important
-#' features occur in winter and span two calendar years. Such cases can be
-#' handled by lagging the time series by an appropriate number of months, or by
-#' subtracting an appropriate number of days from the individual dates.
-#'
-#' \code{\link{tsMake}} can be used to produce \code{ts} and \code{zoo} objects
-#' suitable as arguments to this function.
-#'
-#' The default parameters used for the \code{integrate} function in
-#' \code{phenoPhase} may fail for certain datasets. Try increasing the number
-#' of subdivisions above its default of 100 by adding, for example,
-#' \code{subdivisions = 1000} to the arguments of \code{phenoPhase}.
-#'
-#' @name phenoPhase
-#' @aliases phenoPhase,ts-method phenoPhase,zoo-method
-#' @param x A seasonal time series, or a class \code{zoo} object.
-#' @param season.range A vector of two numbers specifying the season range to
-#' be considered.
-#' @param out The form of the output.
-#' @param ...  Additional arguments to be passed for changing integration
-#' defaults.
-#' @return A data frame with columns year, time of the maximum, fulcrum,
-#' weighted mean time and -- in the case of \code{zoo} objects -- number of
-#' observations. In the case of seasonal time series, the results are all given
-#' as decimal seasons of the year. In the case of dated observations, the
-#' results can be dates, day of the year, or julian day with an origin of
-#' 1970-01-01, depending on the option \code{out}.
-#' @seealso \code{\link{phenoAmp}}, \code{\link{tsMake}}
-#' @references Cloern, J.E. and Jassby, A.D. (2008) Complex seasonal patterns
-#' of primary producers at the land-sea interface. \emph{Ecology Letters}
-#' \bold{11,} 1294--1303.
-#'
-#' Colebrook, J.M. (1979) Continuous plankton records - seasonal cycles of
-#' phytoplankton and copepods in the North Atlantic ocean and the North Sea.
-#' \emph{Marine Biology} \bold{51,} 23--32.
-#' @keywords manip ts
-#' @examples
-#'
-#' # ts example
-#' y <- sfbayChla[, "s27"]
-#' p1 <- phenoPhase(y)
-#' p1
-#' apply(p1, 2, sd, na.rm = TRUE)  # max.time > fulcrum > mean.wt
-#' phenoPhase(y, c(3, 10))
-#'
-#' # zoo example
-#' sfb <- wqData(sfbay, c(1, 3, 4), 5:12, site.order = TRUE, type = "wide",
-#'   time.format = "%m/%d/%Y")
-#' y <- tsMake(sfb, focus = "chl", layer = c(0, 5), type = "zoo")
-#' phenoPhase(y[, "s27"])
-#'
 NULL
 
 
@@ -272,87 +136,6 @@ NULL
 
 
 
-#' Create time series from water quality data
-#'
-#' Creates a matrix time series object from an object of class \code{"WqData"},
-#' either all variables for a single site or all sites for a single variable.
-#'
-#' When \code{qprob = NULL}, the function averages all included depths for each
-#' day, the implicit assumption being that the layer is well-mixed and/or the
-#' samples are evenly distributed with depth in the layer. If \code{layer =
-#' "max.depths"}, then only the value at the maximum depth for each time, site
-#' and variable combination will be used. If no layer is specified, all depths
-#' will be used.
-#'
-#' The function produces a matrix time series of all variables for the
-#' specified site or all sites for the specified variable. If \code{type =
-#' "ts.mon"}, available daily data are averaged to produce a monthly time
-#' series, from which a quarterly or annual series can be created if needed. If
-#' you want values for the actual dates of observation, then set \code{type =
-#' "zoo"}.
-#'
-#' When \code{qprob} is a number from 0 to 1, it is interpreted as a
-#' probability and the corresponding quantile is used to aggregate observations
-#' within the specified layer. So to get the maximum, for example, use qprob =
-#' 1. If \code{type = "ts.mon"}, the same quantile is used to aggregate all the
-#' available daily values.
-#' @name tsMake
-#' @aliases tsMake,WqData-method
-#' @export
-#' @importFrom reshape2 dcast
-#' @importFrom zoo zoo as.yearmon
-#' @importFrom stats as.ts
-#' @param object Object of class \code{"WqData"}.
-#' @param focus Name of a site or water quality variable.
-#' @param layer Number specifying a single depth; a numeric vector of length 2
-#' specifying top and bottom depths of layer; a list specifying multiple depths
-#' and/or layers; or just the string \code{"max.depths"}.
-#' @param type \code{ts.mon} to get a monthly time series, \code{zoo} to get an
-#' object of class \code{"zoo"} with individual observation dates.
-#' @param qprob quantile probability, a number between 0 and 1.
-#' @return A matrix of class \code{"mts"} or \code{"zoo"}.
-#' @note The layer list is allowed to include negative numbers, which may have
-#' been used in the \code{WqData} object to denote variables that apply to the
-#' water column as a whole, such as, say, -1 for light attenuation coefficient.
-#' This enables \code{focus = 's27'} and \code{layer = list(-1, c(0, 5))} to
-#' produce a time series matrix for station 27 that includes both attenuation
-#' coefficient and chlorophyll averaged over the top 5 m. Negative numbers may
-#' also have been used in the \code{WqData} object to identify qualitative
-#' depths such as \dQuote{near bottom}, which is not uncommon in historical
-#' data sets. So data from such depths can be aggregated easily with other data
-#' to make these time series.
-#' @seealso \code{\link{WqData-class}}
-#' @keywords ts
-#' @examples
-#'
-#' # Create new WqData object
-#' sfb <- wqData(sfbay, c(1, 3:4), 5:12, site.order = TRUE,
-#'   time.format = "%m/%d/%Y", type = "wide")
-#'
-#' # Find means in the 0-10 m layer
-#' y <- tsMake(sfb, focus = "s27", layer = c(0, 10))
-#' plot(y, main = "Station 27")
-#' # Or select medians in the same layer
-#' y1 <- tsMake(sfb, focus = "s27", layer = c(0, 10), qprob = 0.5)
-#' plot(y1, main = "Station 27")
-#' # Compare means:medians
-#' apply(y / y1, 2, mean, na.rm = TRUE)
-#'
-#' # Combine a layer with a single additional depth
-#' y <- tsMake(sfb, focus = "chl", layer = list(c(0, 2), 5))
-#' plot(y, main = "Chlorophyll a, ug/L")
-#'
-#' # Use values from the deepest samples
-#' y <- tsMake(sfb, focus = "dox", layer = "max.depths", type = "zoo")
-#' head(y)
-#' plot(y, type = "h", main = "'Bottom' DO, mg/L")
-#'
-NULL
-
-
-
-
-
 #' Miscellaneous utility functions
 #'
 #' A variety of small utilities used in other functions.
@@ -383,45 +166,9 @@ NULL
 #'
 #' \code{years}: Converts dates to the corresponding numeric years.
 #'
-#' @name years
-#' @param d A numeric matrix or data frame with depth in the first column and
-#' observations for some variable in each of the remaining columns.
-#' @param na.rm Should missing data be removed?
-#' @param seas An integer vector of seasons to be retained.
-#' @param sub An integer vector.
-#' @param w A vector of class \code{"Date"}.
-#' @param x A numeric vector.
-#' @param x1 A matrix or vector time series.
-#' @param y A vector of class \code{"Date"} or \code{"POSIX"} date-time.
+#' @name misc
+#' @rdname misc
 #' @keywords manip
-#' @export
-#' @examples
-#'
-#' dates <- as.Date(c("1996-01-01", "1999-12-31", "2004-02-29", "2005-03-01"))
-#' date2decyear(dates)
-#'
-#' decyear2date(c(1996.0014, 1999.9986, 2004.1626, 2005.1630))
-#'
-#' z <- c(1, 2, 3, 5, 10)  # 5 depths
-#' x <- matrix(rnorm(30), nrow = 5)  # 6 variables at 5 depths
-#' layerMean(cbind(z, x))
-#'
-#' leapYear(seq(1500, 2000, 100))
-#' leapYear(c(1996.9, 1997))
-#'
-#' ## Aggregate monthly time series over Feb-Apr only.
-#' aggregate(sfbayChla, 1, meanSub, sub = 2:4)
-#'
-#' monthNum(as.Date(c("2007-03-17", "2003-06-01")))
-#'
-#' ## Ignore certain seasons in a Seasonal Kendall test.
-#' c27 <- sfbayChla[, "s27"]
-#' seaKen(tsSub(c27))  # Aug and Dec missing the most key data
-#' seaKen(tsSub(c27, seas = c(1:7, 9:11)))
-#'
-#' y <- Sys.time()
-#' years(y)
-#'
 NULL
 
 
@@ -438,8 +185,7 @@ NULL
 #'
 #'
 #' @name WqData-class
-#' @aliases WqData-class [,WqData-method summary,WqData-method
-#' plot,WqData-method
+#' @aliases WqData-class [,WqData-method summary,WqData-method plot,WqData-method
 #' @docType class
 #' @section Objects from the Class: Objects can be created by calls of the form
 #' \code{new("WqData", d)}, where \code{d} is a data.frame. \code{d} should

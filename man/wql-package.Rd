@@ -54,8 +54,8 @@ vignette: \dQuote{wql: Exploring environmental monitoring data}.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/jsta/wql}
-  \item Report bugs at \url{https://github.com/jsta/wql/issues}
+  \item \url{https://codeberg.org/jsta/wql}
+  \item Report bugs at \url{https://codeberg.org/jsta/wql/issues}
 }
 
 }

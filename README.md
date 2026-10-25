@@ -16,11 +16,11 @@ developed.](http://www.repostatus.org/badges/latest/active.svg)](https://www.rep
 install.packages("wql")
 ```
 
-### or development version from GitHub
+### or development version from Codeberg
 
 ``` r
-install.packages("devtools")  # package devtools needed
-devtools::install_github("jsta/wql")
+# install.packages("pak")
+pak::pak("git::https://codeberg.org/jsta/wql.git")
 ```
 
 ## Motivation
@@ -73,7 +73,7 @@ A few functions are specialized for the aquatic sciences:
 
 The capabilities of wql are more fully explained in the accompanying
 vignette: [wql: Exploring environmental monitoring
-data](https://jsta.github.io/wql/articles/wql-package.html)
+data](https://jsta.codeberg.page/wql/articles/wql-package.html)
 
 ## References
 
@@ -85,7 +85,7 @@ and code readability.
     #> 
     #>   Alan D. Jassby and James E. Cloern and Jemma Stachelek (2025). wql:
     #>   Some tools for exploring water quality monitoring data. R package
-    #>   version 1.0.2. https://doi.org/10.32614/CRAN.package.wql
+    #>   version 1.0.4. https://doi.org/10.32614/CRAN.package.wql
     #> 
     #> A BibTeX entry for LaTeX users is
     #> 
@@ -93,6 +93,6 @@ and code readability.
     #>     title = {wql: Exploring water quality monitoring data},
     #>     author = {Alan D. Jassby and James E. Cloern and Jemma Stachelek},
     #>     year = {2025},
-    #>     note = {R package version 1.0.2},
+    #>     note = {R package version 1.0.4},
     #>     url = {https://doi.org/10.32614/CRAN.package.wql},
     #>   }

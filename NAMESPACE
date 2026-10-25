@@ -18,6 +18,7 @@ export(monthNum)
 export(mts2ts)
 export(oxySol)
 export(pett)
+export(phenoAmp)
 export(plotSeason)
 export(plotTs)
 export(plotTsAnom)
@@ -27,82 +28,91 @@ export(seaRoll)
 export(seasonTrend)
 export(trendHomog)
 export(ts2df)
-export(tsMake)
 export(tsSub)
 export(wqData)
 export(years)
 exportClasses(WqData)
-exportMethods(phenoAmp)
 exportMethods(phenoPhase)
 exportMethods(plot)
-importFrom(ggplot2,aes)
-importFrom(ggplot2,aes_string)
-importFrom(ggplot2,coord_equal)
-importFrom(ggplot2,element_blank)
-importFrom(ggplot2,element_text)
-importFrom(ggplot2,facet_wrap)
-importFrom(ggplot2,geom_bar)
-importFrom(ggplot2,geom_boxplot)
-importFrom(ggplot2,geom_errorbar)
-importFrom(ggplot2,geom_hline)
-importFrom(ggplot2,geom_line)
-importFrom(ggplot2,geom_linerange)
-importFrom(ggplot2,geom_point)
-importFrom(ggplot2,geom_text)
-importFrom(ggplot2,geom_tile)
-importFrom(ggplot2,geom_vline)
-importFrom(ggplot2,ggplot)
-importFrom(ggplot2,labs)
-importFrom(ggplot2,scale_colour_manual)
-importFrom(ggplot2,scale_fill_manual)
-importFrom(ggplot2,scale_x_continuous)
-importFrom(ggplot2,scale_x_discrete)
-importFrom(ggplot2,scale_y_continuous)
-importFrom(ggplot2,scale_y_discrete)
-importFrom(ggplot2,theme)
-importFrom(ggplot2,theme_bw)
+exportMethods(tsMake)
+importFrom(ggplot2,
+  aes,
+  aes_string,
+  coord_equal,
+  element_blank,
+  element_text,
+  facet_wrap,
+  geom_bar,
+  geom_boxplot,
+  geom_errorbar,
+  geom_hline,
+  geom_line,
+  geom_linerange,
+  geom_point,
+  geom_text,
+  geom_tile,
+  geom_vline,
+  ggplot,
+  labs,
+  scale_colour_manual,
+  scale_fill_manual,
+  scale_x_continuous,
+  scale_x_discrete,
+  scale_y_continuous,
+  scale_y_discrete,
+  theme,
+  theme_bw
+)
 importFrom(grDevices,colorRampPalette)
 importFrom(graphics,dotchart)
-importFrom(methods,"slot<-")
-importFrom(methods,getSlots)
-importFrom(methods,is)
-importFrom(methods,new)
-importFrom(methods,slot)
-importFrom(reshape2,dcast)
-importFrom(reshape2,melt)
-importFrom(stats,aggregate)
-importFrom(stats,approxfun)
-importFrom(stats,as.ts)
-importFrom(stats,cor)
-importFrom(stats,cycle)
-importFrom(stats,end)
-importFrom(stats,frequency)
-importFrom(stats,integrate)
-importFrom(stats,is.mts)
-importFrom(stats,is.ts)
-importFrom(stats,mad)
-importFrom(stats,median)
-importFrom(stats,na.omit)
-importFrom(stats,optimize)
-importFrom(stats,pchisq)
-importFrom(stats,pnorm)
-importFrom(stats,prcomp)
-importFrom(stats,quantile)
-importFrom(stats,setNames)
-importFrom(stats,start)
-importFrom(stats,time)
-importFrom(stats,ts)
-importFrom(stats,ts.union)
-importFrom(stats,tsp)
-importFrom(stats,var)
-importFrom(stats,varimax)
-importFrom(stats,weighted.mean)
-importFrom(stats,window)
-importFrom(zoo,as.Date)
-importFrom(zoo,as.yearmon)
-importFrom(zoo,as.zoo)
-importFrom(zoo,index)
-importFrom(zoo,is.zoo)
-importFrom(zoo,na.approx)
-importFrom(zoo,na.trim)
-importFrom(zoo,zoo)
+importFrom(methods,
+  "slot<-",
+  getSlots,
+  is,
+  new,
+  slot
+)
+importFrom(reshape2,
+  dcast,
+  melt
+)
+importFrom(stats,
+  aggregate,
+  approxfun,
+  as.ts,
+  cor,
+  cycle,
+  end,
+  frequency,
+  integrate,
+  is.mts,
+  is.ts,
+  mad,
+  median,
+  na.omit,
+  optimize,
+  pchisq,
+  pnorm,
+  prcomp,
+  quantile,
+  setNames,
+  start,
+  time,
+  ts,
+  ts.union,
+  tsp,
+  var,
+  varimax,
+  weighted.mean,
+  window
+)
+importFrom(zoo,
+  as.Date,
+  as.yearmon,
+  as.zoo,
+  index,
+  is.zoo,
+  na.approx,
+  na.trim,
+  zoo
+)

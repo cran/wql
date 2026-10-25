@@ -8,12 +8,12 @@ knitr::include_graphics("wqflow.png", auto_pdf = TRUE)
 library(wql)
 
 ## ----eval=FALSE---------------------------------------------------------------
-#  sfbay <- read.csv("sfbay.csv", header = FALSE, as.is = TRUE,
-#                    skip = 2)
-#  names(sfbay) <- c('date', 'time', 'stn', 'depth', 'chl', 'dox',
-#                    'spm', 'ext', 'sal', 'temp', 'nox', 'nhx')
-#  sfbay <- subset(sfbay, stn %in% c(21, 24, 27, 30, 32, 36) &
-#                  substring(date, 7, 10) %in% 1985:2004)
+# sfbay <- read.csv("sfbay.csv", header = FALSE, as.is = TRUE,
+#                   skip = 2)
+# names(sfbay) <- c('date', 'time', 'stn', 'depth', 'chl', 'dox',
+#                   'spm', 'ext', 'sal', 'temp', 'nox', 'nhx')
+# sfbay <- subset(sfbay, stn %in% c(21, 24, 27, 30, 32, 36) &
+#                 substring(date, 7, 10) %in% 1985:2004)
 
 ## -----------------------------------------------------------------------------
 head(sfbay)

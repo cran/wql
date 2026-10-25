@@ -1,3 +1,10 @@
+wql 1.0.4
+=========
+
+* Move from GitHub to Codeberg
+* Remove documentation collisions for misc functions
+* Correctly pass scale argument to eof (HT troyhill)
+
 wql 1.0.3
 =========
 
